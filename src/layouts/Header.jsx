@@ -13,7 +13,7 @@ export default function Header() {
   };
 
   return (
-    <div className="flex justify-between items-center py-3 md:py-7 px-6 md:px-16 bg-[#030400]">
+    <div className="flex justify-between items-center py-3 md:py-7 bg-[#030400] fullContent">
       <Link
         to="/"
         className="flex gap-4 items-center text-white font-bold text-3xl"

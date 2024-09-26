@@ -3,6 +3,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Slider from "react-slick";
 
+import { Faq } from "../components/faq";
+
 const Home = () => {
   var settings = {
     dots: true,
@@ -15,106 +17,121 @@ const Home = () => {
   };
 
   return (
-    <main className="flex flex-col gap-16 md:gap-32 pt-10 md:pt-20 pb-20 md:pb-44 px-6 md:px-16 mx-auto">
-      <section className="flex flex-col items-center gap-10 md:gap-20">
-        <div className="flex pl-0 justify-between">
-          <img
-            src="/assets/img/home/main-left.svg"
-            alt="arbitrium"
-            className="max-w-[720px]"
-          />
-          <div
-            className="flex flex-col items-center gap-6 md:gap-12 max-w-[720px] mx-auto"
-            // data-aos="fade-up"
-          >
-            <div className="flex flex-col text-center font-extrabold pt-16 uppercase">
-              <span className="text-6xl">The Future of</span> 
-              <span className="text-8xl">Sports <br/> Betting</span>
-              <span className="text-7xl">is Here</span> 
+    <main className="flex flex-col gap-16 md:gap-32 pb-20 md:pb-44 mx-auto">
+      <div className="main-bg">
+        <section className="flex flex-col items-center gap-10 md:gap-20 w-[1301px] m-auto">
+          <div className="flex pl-0 w-full relative">
+            <img
+              src="/assets/img/home/main-left.svg"
+              alt="arbitrium"
+              className="z-10"
+            />
+            <div
+              className="flex flex-col pt-12 absolute left-[52%]"
+              // data-aos="fade-up"
+            >
+              <div className="flex flex-col font-extrabold uppercase">
+                <span className="text-6xl purple-gradient-text">The Future of</span> 
+                <span className="text-9xl gray-gradient-text">Sports <br/> Betting</span>
+                <span className="text-7xl text-stroke">is Here!</span> 
+              </div>
             </div>
+            <div className="items-center absolute right-0 bottom-0 text-center">
+              <img
+                src="/assets/img/home/circle.svg"
+                alt="circle"
+                className="w-full h-full mb-2"
+              />
+              <span className="ml-2 font-semibold text-gray-600 pt-4">Get Started</span>
+            </div>
+            
           </div>
-        </div>
 
-        <div
-          className="flex flex-col gap-8"
-          // data-aos="zoom-in"
-          // data-aos-delay={200}
-        >
-          <p className="text-lg md:text-3xl font-bold text-gray-600 text-center">PARTNERS</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="flex items-center">
-              <img
-                src="/assets/img/home/partner-ethereum.svg"
-                alt="ethereum"
-                className="w-10 h-10"
-              />
-              <span className="ml-2">Ethereum</span>
+        </section>
+      </div>
+      <section className="fullContent flex flex-col items-center gap-10 md:gap-20 w-[1301px] m-auto">
+          <div
+            className="flex flex-col gap-8 w-[80%]"
+            // data-aos="zoom-in"
+            // data-aos-delay={200}
+          >
+            <p className="text-lg md:text-3xl font-bold text-gray-600 text-center">PARTNERS</p>
+            <div className="flex justify-between">
+              <div className="flex items-center">
+                <img
+                  src="/assets/img/home/partner-ethereum.svg"
+                  alt="ethereum"
+                  className="w-10"
+                />
+                <span className="ml-2">Ethereum</span>
+              </div>
+              <div className="flex items-center">
+                <img
+                  src="/assets/img/home/partner-arbitrium.svg"
+                  alt="arbitrium"
+                  className="w-10"
+                />
+                <span className="ml-2">Arbiturium</span>
+                </div>
+              <div className="flex items-center">
+                <img
+                  src="/assets/img/home/partner-base.svg"
+                  alt="arbitrium"
+                  className="w-10"
+                />
+                <span className="ml-2">Base</span>
+                </div>
+              <div className="flex items-center">
+                <img
+                  src="/assets/img/home/partner-fx1.svg"
+                  alt="arbitrium"
+                  className="w-10 h-10"
+                />
+                <span className="ml-2">FX1</span>
+                </div>
             </div>
-            <div className="flex items-center">
-              <img
-                src="/assets/img/home/partner-arbitrium.svg"
-                alt="arbitrium"
-                className="w-10 h-10"
-              />
-              <span className="ml-2">Arbiturium</span>
-              </div>
-            <div className="flex items-center">
-              <img
-                src="/assets/img/home/partner-base.svg"
-                alt="arbitrium"
-                className="w-10 h-10"
-              />
-              <span className="ml-2">Base</span>
-              </div>
-            <div className="flex items-center">
-              <img
-                src="/assets/img/home/partner-fx1.svg"
-                alt="arbitrium"
-                className="w-10 h-10"
-              />
-              <span className="ml-2">FX1</span>
-              </div>
           </div>
-        </div>
       </section>
       <div className="w-full px-0">
         <img
           src="/assets/img/home/main-footer.svg"
           alt="arbitrium"
-          className="w-fit"
+          className="w-full"
         />
       </div>
 
-      <section className="flex flex-col items-center">
-        <div className="flex flex-col font-extrabold uppercase text-center gap-2">
-          <span className="text-4xl">bet on your favourite</span>
-          <span className="text-6xl">sports with crypto</span>
-        </div>
-        <Slider
-            {...settings}
-            className="mx-10 pt-8 gap-8 w-[calc(100%-80px)] md:w-[calc(80%-80px)]"
-          >
-            <img
-              src="/assets/img/home/carousel-1.png"
-              className="w-full rounded-2xl px-2"
-            />
-            <img
-              src="/assets/img/home/carousel-2.png"
-              className="w-full rounded-2xl px-2"
-            />
-        </Slider>
-        
-        <img
-          src="/assets/img/home/iPhone-Mockup.png"
-          alt="iPhone-Mockup"
-          className="w-fit"
-        />
-      </section>
+      <div className="main-bg">
+        <section className="fullContent flex flex-col items-center">
+          <div className="flex flex-col font-extrabold uppercase text-center gap-2">
+            <span className="text-4xl purple-gradient-text">bet on your favourite</span>
+            <span className="text-6xl gray-gradient-text">sports with crypto</span>
+          </div>
+          <Slider
+              {...settings}
+              className="mx-10 pt-8 gap-8 w-[calc(100%-80px)] md:w-[calc(80%-80px)]"
+            >
+              <img
+                src="/assets/img/home/carousel-1.png"
+                className="w-full rounded-2xl px-2"
+              />
+              <img
+                src="/assets/img/home/carousel-2.png"
+                className="w-full rounded-2xl px-2"
+              />
+          </Slider>
+          
+          <img
+            src="/assets/img/home/iPhone-Mockup.png"
+            alt="iPhone-Mockup"
+            className="w-fit"
+          />
+        </section>
+      </div>
 
-      <section className="flex flex-col items-center">
+      <section className="fullContent flex flex-col items-center">
         <div className="flex flex-col font-extrabold uppercase text-center gap-2">
-          <span className="text-4xl">Lets get in </span>
-          <span className="text-6xl">Start Playing</span>
+          <span className="text-4xl purple-gradient-text">Lets get in </span>
+          <span className="text-6xl gray-gradient-text">Start Playing</span>
         </div>
         <div className="flex flex-col text-center text-gray-600 text-xl mt-4">
           <span>Choose what you want to play among diverse options to start with.</span>
@@ -142,10 +159,10 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="flex flex-col items-center">
+      <section className="fullContent flex flex-col items-center px-4">
         <div className="flex flex-col font-extrabold uppercase text-center gap-2">
-          <span className="text-4xl">Bet on your Favorite</span>
-          <span className="text-6xl">popular events</span>
+          <span className="text-4xl purple-gradient-text">Bet on your Favorite</span>
+          <span className="text-6xl gray-gradient-text">popular events</span>
         </div>
         <div className="flex justify-center gap-4 mt-16">
           <button className="border border-gray-500 rounded-md flex items-center font-bold px-4 py-2">
@@ -408,75 +425,14 @@ const Home = () => {
 
       </section>
 
-      <section className="flex flex-col items-center">
+      <section className="fullContent flex flex-col items-center">
         <div className="flex flex-col font-extrabold uppercase text-center gap-2">
-          <span className="text-4xl">For Your</span>
-          <span className="text-6xl">Curiosity</span>
+          <span className="text-5xl purple-gradient-text">For Your</span>
+          <span className="text-7xl gray-gradient-text">Curiosity</span>
         </div>
       </section>
-
-
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <div
-          className="border border-[#C1F9167A] rounded-2xl p-4 md:p-8 flex flex-col gap-6 md:gap-12"
-          data-aos="fade-up"
-        >
-          <p className="text-xl md:text-4xl font-semibold">Why Gambit?</p>
-          <p>
-            Welcome to Gambit, the next-generation sports betting platform
-            powered by blockchain technology. Say goodbye to outdated, opaque
-            betting systems, and experience a seamless, secure, and transparent
-            way to bet on your favorite sports.
-          </p>
-        </div>
-        <div
-          className="border border-[#C1F9167A] rounded-2xl p-4 md:p-8 flex flex-col gap-6 md:gap-12"
-          data-aos="fade-up"
-          data-aos-delay={200}
-        >
-          <p className="text-xl md:text-4xl font-semibold">Why Blockchain?</p>
-          <p>
-            Gambit uses decentralized technology to ensure that all betting
-            transactions are immutable and transparent. You’ll never have to
-            worry about shady practices, manipulated odds, or withheld payouts
-            again. Blockchain empowers you to take control of your betting
-            experience.
-          </p>
-        </div>
-        <div
-          className="border border-[#C1F9167A] rounded-2xl p-4 md:p-8 flex flex-col gap-6 md:gap-12 bg-gradient-to-b from-[#C1F916] to-[#72930D] text-black"
-          data-aos="fade-up"
-          data-aos-delay={400}
-        >
-          <p className="text-xl md:text-4xl font-semibold">
-            Join the Community
-          </p>
-          <p>
-            Become part of the Gambit community and connect with fellow sports
-            fans and betting enthusiasts from around the world. Stay updated
-            with the latest events, exclusive promotions, and real-time insights
-            from our experts. Whether you’re here to learn, share strategies, or
-            just chat about the latest game, our community is the place to be.
-          </p>
-        </div>
-        <div
-          className="border border-[#C1F9167A] rounded-2xl p-4 md:p-8 flex flex-col gap-6 md:gap-12"
-          data-aos="fade-up"
-          data-aos-delay={600}
-        >
-          <p className="text-xl md:text-4xl font-semibold">
-            Get Started Today!
-          </p>
-          <p>
-            Whether you`re a casual bettor or a seasoned pro, Gambit offers the
-            most secure, user-friendly, and rewarding platform for sports
-            enthusiasts everywhere. Connect your wallet, place your bet, and
-            start winning with Gambit today!
-          </p>
-          <button className="w-[160px] h-[45px] text-[#030400] bg-[#C1F916] font-bold rounded-full">
-            Get started
-          </button>
-        </div>
+      <section className="fullContent">
+        <Faq />
       </section>
     </main>
   );

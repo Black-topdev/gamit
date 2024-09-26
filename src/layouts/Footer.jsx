@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer>
-      <section className="bg-[#252525] flex flex-col md:flex-row justify-between gap-8 px-8 md:px-16 py-6 md:py-12">
+    <footer className="fullContent">
+      <section className="faq-bg flex flex-col md:flex-row justify-between gap-8 px-8 md:px-16 py-6 md:py-12">
         <div className="max-w-[444px] flex flex-col gap-8">
           <Link to="/">
             <img

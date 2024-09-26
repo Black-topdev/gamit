@@ -1,3 +1,49 @@
 .signup-button {
     background: linear-gradient(103.58deg, #C1F916 -15.91%, #000000 51.72%, #C0FF00 122.87%);
 }
+
+.fullContent {
+    max-width: 1400px;
+}
+
+@media(min-width: 1024px) {
+    .fullContent {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .content {
+      margin-left: auto;
+      margin-right: auto;
+    }
+}
+
+.purple-gradient-text {
+    background: #FFFFFF;
+    background: linear-gradient(to right, #FFFFFF 0%, #A763FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gray-gradient-text {
+    background: #FFFFFF;
+    background: linear-gradient(to bottom, #FFFFFF 0%, #999999 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-stroke {
+	-webkit-text-stroke: 1.5px #ffffff;
+	color: #000000;
+	font-size: 75px;
+	font-family: Arial Black, Gadget, sans-serif;
+}
+
+.main-bg {
+    background: rgb(0,0,0);
+    background: linear-gradient(178deg, rgb(20 4 24) 0%, rgb(48 121 2 / 13%) 50%, rgba(0, 0, 0, 1) 100%);
+}
+
+.faq-bg {
+    background: rgb(24,20,32);
+    background: linear-gradient(90deg, rgba(24,20,32,1) 0%, rgba(45,3,69,1) 100%);
+}
