@@ -42,34 +42,38 @@ const Home = () => {
         >
           <p className="text-lg md:text-3xl font-bold text-gray-600 text-center">PARTNERS</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div>                
+            <div className="flex items-center">
               <img
                 src="/assets/img/home/partner-ethereum.svg"
                 alt="ethereum"
                 className="w-10 h-10"
               />
+              <span className="ml-2">Ethereum</span>
             </div>
-            <div>
+            <div className="flex items-center">
               <img
                 src="/assets/img/home/partner-arbitrium.svg"
                 alt="arbitrium"
                 className="w-10 h-10"
               />
-            </div>
-            <div>
+              <span className="ml-2">Arbiturium</span>
+              </div>
+            <div className="flex items-center">
               <img
                 src="/assets/img/home/partner-base.svg"
                 alt="arbitrium"
                 className="w-10 h-10"
               />
-            </div>
-            <div>
+              <span className="ml-2">Base</span>
+              </div>
+            <div className="flex items-center">
               <img
                 src="/assets/img/home/partner-fx1.svg"
                 alt="arbitrium"
                 className="w-10 h-10"
               />
-            </div>
+              <span className="ml-2">FX1</span>
+              </div>
           </div>
         </div>
       </section>
@@ -88,133 +92,329 @@ const Home = () => {
         </div>
         <Slider
             {...settings}
-            className="mx-10 pt-8 gap-8 w-[calc(100%-80px)] md:w-[calc(50%-80px)]"
+            className="mx-10 pt-8 gap-8 w-[calc(100%-80px)] md:w-[calc(80%-80px)]"
           >
             <img
-              src="/assets/img/home/carousel1.svg"
-              className="w-full border border-[#C1F9167A] rounded-2xl"
+              src="/assets/img/home/carousel-1.png"
+              className="w-full rounded-2xl px-2"
             />
             <img
-              src="/assets/img/home/carousel1.svg"
-              className="w-full border border-[#C1F9167A] rounded-2xl"
+              src="/assets/img/home/carousel-2.png"
+              className="w-full rounded-2xl px-2"
             />
         </Slider>
+        
+        <img
+          src="/assets/img/home/iPhone-Mockup.png"
+          alt="iPhone-Mockup"
+          className="w-fit"
+        />
       </section>
 
-      <section data-aos="fade-left" data-aos-delay={200}>
-        <div className="mb-16 flex flex-col md:flex-row gap-6">
-          <Slider
-            {...settings}
-            className="mx-10 w-[calc(100%-80px)] md:w-[calc(50%-80px)]"
-          >
-            <img
-              src="/assets/img/home/carousel1.svg"
-              className="w-full border border-[#C1F9167A] rounded-2xl"
-            />
-            <img
-              src="/assets/img/home/carousel1.svg"
-              className="w-full border border-[#C1F9167A] rounded-2xl"
-            />
-          </Slider>
-          <Slider
-            {...settings}
-            className="mx-10 w-[calc(100%-80px)] md:w-[calc(50%-80px)]"
-          >
-            <img
-              src="/assets/img/home/carousel2.svg"
-              className="w-full border border-[#C1F9167A] rounded-2xl"
-            />
-            <img
-              src="/assets/img/home/carousel2.svg"
-              className="w-full border border-[#C1F9167A] rounded-2xl"
-            />
-          </Slider>
+      <section className="flex flex-col items-center">
+        <div className="flex flex-col font-extrabold uppercase text-center gap-2">
+          <span className="text-4xl">Lets get in </span>
+          <span className="text-6xl">Start Playing</span>
         </div>
-        <p className="text-xl md:text-4xl font-semibold mb-4 md:mb-8">
-          Most Popular bets
-        </p>
+        <div className="flex flex-col text-center text-gray-600 text-xl mt-4">
+          <span>Choose what you want to play among diverse options to start with.</span>
+          <span>you can explore the latest news about sports in discover section.</span>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+          <div className="flex items-end">
+            <div>
+              <img src="/assets/img/home/trending.png"/>
+              <p className="text-center uppercase font-extrabold">trending</p>
+            </div>
+          </div>
+          <div className="flex items-end">
+            <div>
+              <img src="/assets/img/home/sports.png"/>
+              <p className="text-center uppercase font-extrabold">sports</p>
+            </div>
+          </div>
+          <div className="flex items-end">
+            <div>
+              <img src="/assets/img/home/discover.png"/>
+              <p className="text-center uppercase font-extrabold">discover</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <div className="flex gap-1 md:gap-3 mb-5 md:mb-10 flex-wrap text-xs md:text-base">
-          <p className="bg-[#C1F916] rounded-2xl text-[#030400] font-semibold py-[10px] px-4">
+      <section className="flex flex-col items-center">
+        <div className="flex flex-col font-extrabold uppercase text-center gap-2">
+          <span className="text-4xl">Bet on your Favorite</span>
+          <span className="text-6xl">popular events</span>
+        </div>
+        <div className="flex justify-center gap-4 mt-16">
+          <button className="border border-gray-500 rounded-md flex items-center font-bold px-4 py-2">
+            <span className="bg-red-600 w-2 h-2 rounded-full"></span>
+            <span className="ml-2 text-2xl">Live</span>
+          </button>
+          <button className="bg-[#BFF816] rounded-md text-black text-2xl px-4 py-2">
+            Top Events
+          </button>
+        </div>
+        <div className="flex flex-wrap gap-4 mt-4">
+          <button className="bg-[#BFF816] rounded-full text-black text-xl px-4 py-1">
             Soccer
-          </p>
-          <p className="bg-[#232323] rounded-2xl font-semibold py-[10px] px-4">
+          </button>
+          <button className="bg-gray-800 rounded-full text-xl px-4 py-1">
             Basketball
-          </p>
-          <p className="bg-[#232323] rounded-2xl font-semibold py-[10px] px-4">
+          </button>
+          <button className="bg-gray-800 rounded-full text-xl px-4 py-1">
             Tennis
-          </p>
-          <p className="bg-[#232323] rounded-2xl font-semibold py-[10px] px-4">
+          </button>
+          <button className="bg-gray-800 rounded-full text-xl px-4 py-1">
             FootballGo
-          </p>
-          <p className="bg-[#232323] rounded-2xl font-semibold py-[10px] px-4">
+          </button>
+          <button className="bg-gray-800 rounded-full text-xl px-4 py-1">
             American Football
-          </p>
-          <p className="bg-[#232323] rounded-2xl font-semibold py-[10px] px-4">
+          </button>
+          <button className="bg-gray-800 rounded-full text-xl px-4 py-1">
             Cricket
-          </p>
-          <p className="bg-[#232323] rounded-2xl font-semibold py-[10px] px-4">
+          </button>
+          <button className="bg-gray-800 rounded-full text-xl px-4 py-1">
             Hockey
-          </p>
-          <p className="bg-[#232323] rounded-2xl font-semibold py-[10px] px-4">
+          </button>
+          <button className="bg-gray-800 rounded-full text-xl px-4 py-1">
             Baseball
-          </p>
-          <p className="bg-[#232323] rounded-2xl font-semibold py-[10px] px-4">
-            Wrestling
-          </p>
-          <p className="bg-[#232323] rounded-2xl font-semibold py-[10px] px-4">
-            Handball
-          </p>
+          </button>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full mt-16">
+          <div className="border border-[#295323] rounded-lg p-4">
+            <div className="grid grid-cols-3 gap-3">
+              <div className="flex flex-col items-center">
+                <img src="/assets/img/home/logo-che.png"/>
+                <span className="text-gray-600 mt-1">CHE</span>
+                <span className="mt-1 font-bold">Chelsea</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="text-gray-600">Matchday 2</span>
+                <span className="mt-1 font-bold text-2xl">0 : 0</span>
+                <span className="text-gray-600">February 8, 2024</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <img src="/assets/img/home/logo-ars.png"/>
+                <span className="text-gray-600 mt-1">ARS</span>
+                <span className="mt-1 font-bold">Arsenal</span>
+              </div>
+            </div>
+            <div className="grid grid-cols-3 gap-3 m-2">
+              <button className="border border-[#295323] rounded-full px-4 py-1 flex justify-between">
+                <span className="text-gray-600">1x</span>
+                <span className="font-bold">3.56</span>
+              </button>
+              <button className="border border-[#295323] rounded-full px-4 py-1 flex justify-between">
+                <span className="text-gray-600">x</span>
+                <span className="font-bold">2.99</span>
+              </button>
+              <button className="border border-[#295323] rounded-full px-4 py-1 flex justify-between">
+                <span className="text-gray-600">2x</span>
+                <span className="font-bold">1.86</span>
+              </button>
+            </div>
+            <div className="mt-4 h-2 bg-red-600">
+              <div className="h-2 bg-blue-600 w-[60%]"></div>
+            </div>
+          </div>
+
+          <div className="border border-[#295323] rounded-lg p-4">
+            <div className="grid grid-cols-3 gap-3">
+              <div className="flex flex-col items-center">
+                <img src="/assets/img/home/logo-drt.png"/>
+                <span className="text-gray-600 mt-1">DRT</span>
+                <span className="mt-1 font-bold">Dortmund</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="text-gray-600">Matchday 2</span>
+                <span className="mt-1 font-bold text-2xl">0 : 0</span>
+                <span className="text-gray-600">February 8, 2024</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <img src="/assets/img/home/logo-brg.png"/>
+                <span className="text-gray-600 mt-1">BRG</span>
+                <span className="mt-1 font-bold">Brugge</span>
+              </div>
+            </div>
+            <div className="grid grid-cols-3 gap-3 m-2">
+              <button className="border border-[#295323] rounded-full px-4 py-1 flex justify-between">
+                <span className="text-gray-600">1x</span>
+                <span className="font-bold">3.56</span>
+              </button>
+              <button className="border border-[#295323] rounded-full px-4 py-1 flex justify-between">
+                <span className="text-gray-600">x</span>
+                <span className="font-bold">2.99</span>
+              </button>
+              <button className="border border-[#295323] rounded-full px-4 py-1 flex justify-between">
+                <span className="text-gray-600">2x</span>
+                <span className="font-bold">1.86</span>
+              </button>
+            </div>
+            <div className="mt-4 h-2 bg-red-600">
+              <div className="h-2 bg-blue-600 w-[30%]"></div>
+            </div>
+          </div>
+
+          <div className="border border-[#295323] rounded-lg p-4">
+            <div className="grid grid-cols-3 gap-3">
+              <div className="flex flex-col items-center">
+                <img src="/assets/img/home/logo-int.png"/>
+                <span className="text-gray-600 mt-1">INT</span>
+                <span className="mt-1 font-bold">Inter</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="text-gray-600">Matchday 2</span>
+                <span className="mt-1 font-bold text-2xl">0 : 0</span>
+                <span className="text-gray-600">February 8, 2024</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <img src="/assets/img/home/logo-man.png"/>
+                <span className="text-gray-600 mt-1">MAN</span>
+                <span className="mt-1 font-bold">Man City</span>
+              </div>
+            </div>
+            <div className="grid grid-cols-3 gap-3 m-2">
+              <button className="border border-[#295323] rounded-full px-4 py-1 flex justify-between">
+                <span className="text-gray-600">1x</span>
+                <span className="font-bold">3.56</span>
+              </button>
+              <button className="border border-[#295323] rounded-full px-4 py-1 flex justify-between">
+                <span className="text-gray-600">x</span>
+                <span className="font-bold">2.99</span>
+              </button>
+              <button className="border border-[#295323] rounded-full px-4 py-1 flex justify-between">
+                <span className="text-gray-600">2x</span>
+                <span className="font-bold">1.86</span>
+              </button>
+            </div>
+            <div className="mt-4 h-2 bg-red-600">
+              <div className="h-2 bg-blue-600 w-[80%]"></div>
+            </div>
+          </div>
+
+          <div className="border border-[#295323] rounded-lg p-4">
+            <div className="grid grid-cols-3 gap-3">
+              <div className="flex flex-col items-center">
+                <img src="/assets/img/home/logo-che.png"/>
+                <span className="text-gray-600 mt-1">CHE</span>
+                <span className="mt-1 font-bold">Chelsea</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="text-gray-600">Matchday 2</span>
+                <span className="mt-1 font-bold text-2xl">0 : 0</span>
+                <span className="text-gray-600">February 8, 2024</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <img src="/assets/img/home/logo-ars.png"/>
+                <span className="text-gray-600 mt-1">ARS</span>
+                <span className="mt-1 font-bold">Arsenal</span>
+              </div>
+            </div>
+            <div className="grid grid-cols-3 gap-3 m-2">
+              <button className="border border-[#295323] rounded-full px-4 py-1 flex justify-between">
+                <span className="text-gray-600">1x</span>
+                <span className="font-bold">3.56</span>
+              </button>
+              <button className="border border-[#295323] rounded-full px-4 py-1 flex justify-between">
+                <span className="text-gray-600">x</span>
+                <span className="font-bold">2.99</span>
+              </button>
+              <button className="border border-[#295323] rounded-full px-4 py-1 flex justify-between">
+                <span className="text-gray-600">2x</span>
+                <span className="font-bold">1.86</span>
+              </button>
+            </div>
+            <div className="mt-4 h-2 bg-red-600">
+              <div className="h-2 bg-blue-600 w-[60%]"></div>
+            </div>
+          </div>
+
+          <div className="border border-[#295323] rounded-lg p-4">
+            <div className="grid grid-cols-3 gap-3">
+              <div className="flex flex-col items-center">
+                <img src="/assets/img/home/logo-drt.png"/>
+                <span className="text-gray-600 mt-1">DRT</span>
+                <span className="mt-1 font-bold">Dortmund</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="text-gray-600">Matchday 2</span>
+                <span className="mt-1 font-bold text-2xl">0 : 0</span>
+                <span className="text-gray-600">February 8, 2024</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <img src="/assets/img/home/logo-brg.png"/>
+                <span className="text-gray-600 mt-1">BRG</span>
+                <span className="mt-1 font-bold">Brugge</span>
+              </div>
+            </div>
+            <div className="grid grid-cols-3 gap-3 m-2">
+              <button className="border border-[#295323] rounded-full px-4 py-1 flex justify-between">
+                <span className="text-gray-600">1x</span>
+                <span className="font-bold">3.56</span>
+              </button>
+              <button className="border border-[#295323] rounded-full px-4 py-1 flex justify-between">
+                <span className="text-gray-600">x</span>
+                <span className="font-bold">2.99</span>
+              </button>
+              <button className="border border-[#295323] rounded-full px-4 py-1 flex justify-between">
+                <span className="text-gray-600">2x</span>
+                <span className="font-bold">1.86</span>
+              </button>
+            </div>
+            <div className="mt-4 h-2 bg-red-600">
+              <div className="h-2 bg-blue-600 w-[30%]"></div>
+            </div>
+          </div>
+
+          <div className="border border-[#295323] rounded-lg p-4">
+            <div className="grid grid-cols-3 gap-3">
+              <div className="flex flex-col items-center">
+                <img src="/assets/img/home/logo-int.png"/>
+                <span className="text-gray-600 mt-1">INT</span>
+                <span className="mt-1 font-bold">Inter</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="text-gray-600">Matchday 2</span>
+                <span className="mt-1 font-bold text-2xl">0 : 0</span>
+                <span className="text-gray-600">February 8, 2024</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <img src="/assets/img/home/logo-man.png"/>
+                <span className="text-gray-600 mt-1">MAN</span>
+                <span className="mt-1 font-bold">Man City</span>
+              </div>
+            </div>
+            <div className="grid grid-cols-3 gap-3 m-2">
+              <button className="border border-[#295323] rounded-full px-4 py-1 flex justify-between">
+                <span className="text-gray-600">1x</span>
+                <span className="font-bold">3.56</span>
+              </button>
+              <button className="border border-[#295323] rounded-full px-4 py-1 flex justify-between">
+                <span className="text-gray-600">x</span>
+                <span className="font-bold">2.99</span>
+              </button>
+              <button className="border border-[#295323] rounded-full px-4 py-1 flex justify-between">
+                <span className="text-gray-600">2x</span>
+                <span className="font-bold">1.86</span>
+              </button>
+            </div>
+            <div className="mt-4 h-2 bg-red-600">
+              <div className="h-2 bg-blue-600 w-[80%]"></div>
+            </div>
+          </div>
         </div>
 
-        <div className="w-full overflow-auto text-xs md:xt-base">
-          <table className="w-full border-collapse">
-            <thead>
-              <tr className="bg-[#181818] border border-[#C1F9163D]">
-                <th className="px-3 md:px-6 py-1 md:py-3 text-left">Time</th>
-                <th className="px-3 md:px-6 py-1 md:py-3 text-left">Game</th>
-                <th className="px-3 md:px-6 py-1 md:py-3 text-left">1</th>
-                <th className="px-3 md:px-6 py-1 md:py-3 text-left">X</th>
-                <th className="px-3 md:px-6 py-1 md:py-3 text-left">2</th>
-              </tr>
-            </thead>
-            <tbody>
-              {Array(5)
-                .fill(true)
-                .map((_, index) => {
-                  return (
-                    <tr
-                      key={index}
-                      className="bg-[#181818] border border-[#C1F9163D]"
-                    >
-                      <td className="px-3 md:px-6 py-3 md:py-6">
-                        11:00 AM SEP 29
-                      </td>
-                      <td className="px-3 md:px-6 py-3 md:py-6">
-                        Conventry City vs Tottenham Hotspur
-                      </td>
-                      <td className="px-3 md:px-6 py-3 md:py-6">
-                        <span className="border border-[#C1F916] text-[#C1F916] px-4 py-[2px] rounded-full text-sm md:text-xl font-semibold">
-                          2.10
-                        </span>
-                      </td>
-                      <td className="px-3 md:px-6 py-3 md:py-6">
-                        <span className="border border-[#C1F916] text-[#C1F916] px-4 py-[2px] rounded-full text-sm md:text-xl font-semibold">
-                          3.75
-                        </span>
-                      </td>
-                      <td className="px-3 md:px-6 py-3 md:py-6">
-                        <span className="border border-[#C1F916] text-[#C1F916] px-4 py-[2px] rounded-full text-sm md:text-xl font-semibold">
-                          2.75
-                        </span>
-                      </td>
-                    </tr>
-                  );
-                })}
-            </tbody>
-          </table>
+      </section>
+
+      <section className="flex flex-col items-center">
+        <div className="flex flex-col font-extrabold uppercase text-center gap-2">
+          <span className="text-4xl">For Your</span>
+          <span className="text-6xl">Curiosity</span>
         </div>
       </section>
+
 
       <section className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div
