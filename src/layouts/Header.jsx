@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom"
 
 export default function Header() {
   const location = useLocation();
@@ -25,7 +25,7 @@ export default function Header() {
           to="/products"
           className={`hover:text-[#983BF6] flex gap-2 items-center ${
             location.pathname === "/products"
-              ? "text-[#983BF6] font-medium"
+              ? "text-[#983BF6] font-semibold"
               : ""
           }`}
         >
@@ -36,7 +36,7 @@ export default function Header() {
           to="/features"
           className={`hover:text-[#983BF6] flex gap-2 items-center ${
             location.pathname === "/features"
-              ? "text-[#983BF6] font-medium"
+              ? "text-[#983BF6] font-semibold"
               : ""
           }`}
         >
@@ -46,7 +46,7 @@ export default function Header() {
         <Link
           to="/about"
           className={`hover:text-[#983BF6] ${
-            location.pathname === "/about" ? "text-[#983BF6] font-medium" : ""
+            location.pathname === "/about" ? "text-[#983BF6] font-semibold" : ""
           }`}
         >
           About
@@ -55,7 +55,7 @@ export default function Header() {
           to="/partners"
           className={`hover:text-[#983BF6] ${
             location.pathname === "/partners"
-              ? "text-[#983BF6] font-medium"
+              ? "text-[#983BF6] font-semibold"
               : ""
           }`}
         >
@@ -63,10 +63,12 @@ export default function Header() {
         </Link>
       </div>
       <div className="hidden md:flex gap-4 items-center">
-        <button className="bg-[#3E3E3E] font-semibold px-[10px] py-[2px] rounded-2xl">
-          Sign up
-        </button>
-        <button className="bg-[#C1F916] font-semibold text-[#030400] px-[10px] py-[2px] rounded-2xl">
+        <div className="signup-button rounded-2xl p-[1px]">
+          <button className="bg-black font-semibold px-4 py-2 rounded-2xl border-red-500">
+            Sign up
+          </button>
+        </div>
+        <button className="bg-[#C1F916] font-semibold text-[#030400] px-4 py-2 rounded-2xl">
           Connect wallet
         </button>
       </div>
@@ -136,10 +138,12 @@ export default function Header() {
         >
           Partners
         </Link>
-        <button className="bg-[#3E3E3E] font-semibold px-[10px] py-[2px] rounded-2xl">
-          Sign up
-        </button>
-        <button className="bg-[#C1F916] font-semibold text-[#030400] px-[10px] py-[2px] rounded-2xl">
+        <div className="signup-button rounded-2xl p-[1px]">
+          <button className="bg-black font-semibold px-4 py-2 rounded-2xl border-red-500">
+            Sign up
+          </button>
+        </div>
+        <button className="bg-[#C1F916] font-semibold text-[#030400] px-4 py-2 rounded-2xl">
           Connect wallet
         </button>
       </div>

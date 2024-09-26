@@ -1,148 +1,104 @@
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+import Slider from "react-slick";
 
 const Home = () => {
   var settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
   };
 
   return (
-    <main className="flex flex-col gap-16 md:gap-32 pt-10 md:pt-20 pb-20 md:pb-44 max-w-[1420px] px-3 mx-auto">
+    <main className="flex flex-col gap-16 md:gap-32 pt-10 md:pt-20 pb-20 md:pb-44 px-6 md:px-16 mx-auto">
       <section className="flex flex-col items-center gap-10 md:gap-20">
-        <div
-          className="flex flex-col items-center gap-6 md:gap-12 max-w-[720px] mx-auto"
-          data-aos="fade-up"
-        >
-          <p className="font-extrabold text-3xl md:text-6xl text-center">
-            The Future of Sports Betting is Here
-          </p>
-          <p className="text-base md:text-2xl font-light text-center">
-            Bet Smarter. Win Bigger. Own Your Game.
-          </p>
-          <button className="w-[160px] h-[45px] text-[#030400] bg-[#C1F916] font-bold rounded-full">
-            Get started
-          </button>
+        <div className="flex pl-0 justify-between">
+          <img
+            src="/assets/img/home/main-left.svg"
+            alt="arbitrium"
+            className="max-w-[720px]"
+          />
+          <div
+            className="flex flex-col items-center gap-6 md:gap-12 max-w-[720px] mx-auto"
+            // data-aos="fade-up"
+          >
+            <div className="flex flex-col text-center font-extrabold pt-16 uppercase">
+              <span className="text-6xl">The Future of</span> 
+              <span className="text-8xl">Sports <br/> Betting</span>
+              <span className="text-7xl">is Here</span> 
+            </div>
+          </div>
         </div>
 
         <div
-          className="flex flex-col items-center gap-8"
-          data-aos="zoom-in"
-          data-aos-delay={200}
+          className="flex flex-col gap-8"
+          // data-aos="zoom-in"
+          // data-aos-delay={200}
         >
-          <p className="text-lg md:text-3xl font-semibold">PARTNERS</p>
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="flex gap-4">
-              <div className="flex items-center gap-4 border border-[#444444] rounded-full p-3 font-bold">
-                <img
-                  src="/assets/img/home/partner-ethereum.svg"
-                  alt="ethereum"
-                />
-                <p>Ethereum</p>
-              </div>
-              <div className="flex items-center gap-4 border border-[#444444] rounded-full p-3 font-bold">
-                <img
-                  src="/assets/img/home/partner-arbitrium.svg"
-                  alt="arbitrium"
-                />
-                <p>Arbitrium</p>
-              </div>
+          <p className="text-lg md:text-3xl font-bold text-gray-600 text-center">PARTNERS</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div>                
+              <img
+                src="/assets/img/home/partner-ethereum.svg"
+                alt="ethereum"
+                className="w-10 h-10"
+              />
             </div>
-            <div className="flex gap-4 justify-center">
-              <div className="flex items-center gap-4 border border-[#444444] rounded-full p-3 font-bold">
-                <img src="/assets/img/home/partner-base.svg" alt="base" />
-                <p>Base</p>
-              </div>
-              <div className="flex items-center gap-4 border border-[#444444] rounded-full p-3 font-bold">
-                <img src="/assets/img/home/partner-fx1.svg" alt="fx1" />
-                <p>FX1</p>
-              </div>
+            <div>
+              <img
+                src="/assets/img/home/partner-arbitrium.svg"
+                alt="arbitrium"
+                className="w-10 h-10"
+              />
+            </div>
+            <div>
+              <img
+                src="/assets/img/home/partner-base.svg"
+                alt="arbitrium"
+                className="w-10 h-10"
+              />
+            </div>
+            <div>
+              <img
+                src="/assets/img/home/partner-fx1.svg"
+                alt="arbitrium"
+                className="w-10 h-10"
+              />
             </div>
           </div>
         </div>
       </section>
+      <div className="w-full px-0">
+        <img
+          src="/assets/img/home/main-footer.svg"
+          alt="arbitrium"
+          className="w-fit"
+        />
+      </div>
 
-      <section className="flex flex-col gap-8 md:gap-16">
-        <p className="text-xl md:text-4xl font-semibold text-center">
-          How it works
-        </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-5">
-          <div
-            className="border border-[#C1F9167A] rounded-2xl p-4 md:p-8 flex flex-col gap-6 md:gap-12"
-            data-aos="fade-up"
-          >
-            <img
-              src="/assets/img/home/wallet-dynamic-color.svg"
-              alt="connect-wallet"
-              className="w-[72px] h-[72px]"
-            />
-            <p className="text-base md:text-2xl font-semibold">
-              Connect your wallet
-            </p>
-            <p>
-              Sign in with your web3 wallet to access the Gambit platform. No
-              registration required.
-            </p>
-          </div>
-          <div
-            className="border border-[#C1F9167A] rounded-2xl p-4 md:p-8 flex flex-col gap-6 md:gap-12"
-            data-aos="fade-up"
-            data-aos-delay={200}
-          >
-            <img
-              src="/assets/img/home/target-dynamic-color.svg"
-              alt="connect-wallet"
-              className="w-[72px] h-[72px]"
-            />
-            <p className="text-base md:text-2xl font-semibold">
-              Choose Your Sport:
-            </p>
-            <p>
-              Browse our wide range of sports and live events, and select the
-              match you want to bet on.
-            </p>
-          </div>
-          <div
-            className="border border-[#C1F9167A] rounded-2xl p-4 md:p-8 flex flex-col gap-6 md:gap-12"
-            data-aos="fade-up"
-            data-aos-delay={400}
-          >
-            <img
-              src="/assets/img/home/tick-dynamic-color.svg"
-              alt="connect-wallet"
-              className="w-[72px] h-[72px]"
-            />
-            <p className="text-base md:text-2xl font-semibold">
-              Place Your Bet:
-            </p>
-            <p>
-              Enter your wager, confirm the bet, and watch as your prediction
-              plays out in real-time.
-            </p>
-          </div>
-          <div
-            className="border border-[#C1F9167A] rounded-2xl p-4 md:p-8 flex flex-col gap-6 md:gap-12"
-            data-aos="fade-up"
-            data-aos-delay={600}
-          >
-            <img
-              src="/assets/img/home/money-bag-dynamic-color.svg"
-              alt="connect-wallet"
-              className="w-[72px] h-[72px]"
-            />
-            <p className="text-base md:text-2xl font-semibold">Win & Earn:</p>
-            <p>
-              When you win, your payouts are instantly delivered to your wallet,
-              with no middlemen or delays.
-            </p>
-          </div>
+      <section className="flex flex-col items-center">
+        <div className="flex flex-col font-extrabold uppercase text-center gap-2">
+          <span className="text-4xl">bet on your favourite</span>
+          <span className="text-6xl">sports with crypto</span>
         </div>
+        <Slider
+            {...settings}
+            className="mx-10 pt-8 gap-8 w-[calc(100%-80px)] md:w-[calc(50%-80px)]"
+          >
+            <img
+              src="/assets/img/home/carousel1.svg"
+              className="w-full border border-[#C1F9167A] rounded-2xl"
+            />
+            <img
+              src="/assets/img/home/carousel1.svg"
+              className="w-full border border-[#C1F9167A] rounded-2xl"
+            />
+        </Slider>
       </section>
 
       <section data-aos="fade-left" data-aos-delay={200}>
@@ -312,7 +268,7 @@ const Home = () => {
             Get Started Today!
           </p>
           <p>
-            Whether you're a casual bettor or a seasoned pro, Gambit offers the
+            Whether you`re a casual bettor or a seasoned pro, Gambit offers the
             most secure, user-friendly, and rewarding platform for sports
             enthusiasts everywhere. Connect your wallet, place your bet, and
             start winning with Gambit today!
