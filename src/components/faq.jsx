@@ -15,32 +15,32 @@ export const Faq = () => {
   const faqItems = [
     {
       id: 1,
-      title: 'What exactly is the Nexys loan management software platform, loan origination software?',
+      title: 'Why Gambit?',
       content:
-        'The Nexys loan management software platform is a hub built to always be on the cutting edge of private and commercial lending technology stack of Customer Relationship Management (CRM), Loan Origination Software (LOS), Loan Pricing with Real Time Rate Locking, Loan Servicing, 3rd Party (Outsourced) Loan Servicing Management, Investors, Capital Raise, Accounting, Vendors and Default Management.',
+        'Welcome to Gambit, the next-generation sports betting platform powered by blockchain technology. Say goodbye to outdated, opaque betting systems, and experience a seamless, secure, and transparent way to bet on your favorite sports.',
     },
     {
       id: 2,
-      title: 'Is Nexys designed for a Broker / Lender / Table Funder / Correspondent / Branch / Vendor?',
+      title: 'Why Blockchain?',
       content:
-        'The Nexys loan management software platform is a hub for all parties involved in private and commercial real estate transactions. It is designed for the unique needs of Brokers, Lenders, Table Funders, Correspondents, Branches and Vendors to easily communicate, gather information, documentation, process, underwrite, price, actually lock rates, manage pipelines, close, fund, service, and manage their portfolio of loans. ',
+        'aaaaaaaaaaaaaa ',
     },
     {
       id: 3,
-      title: 'Can I import my data from another loan management software, loan origination software or loan tapes?',
+      title: 'How do you handle project revisions or changes?',
       content:
-        'The Nexys team will work with you to import data from virtually any source relevant to your lending business.',
+        'bbbbbbbbbbbbbbbbbbb.',
     },
     {
       id: 4,
-      title: 'How secure & private is my data in Nexys loan origination software, loan management software?',
+      title: 'What if I`m not satisfied with the final result?',
       content:
-        'At Nexys, our number one priority is the security and integrity of our customers` data.  We adhere to the most strict framework for cybersecurity compliance to manage customer data securely and provide industry leading network security, availability, processing integrity, confidentiality, and privacy. ',
+        'ccccccccccccccccccc',
     }
   ]
 
   return (
-    <div className="mx-auto">
+    <div className="w-[1260px] mx-auto">
       {faqItems.map((item, index) => {
         const isActive = faqStatus[item.id]
         return (
@@ -73,6 +73,9 @@ export const Faq = () => {
           </div>
         )
       })}
+      <div className='md:mb-6 mb-3 rounded-xl faq-bg text-tiber overflow-hidden shadow-lg'>
+        <p className="text-base xl:text-lg font-medium">Join The Community</p>
+      </div>
     </div>
   )
 }
